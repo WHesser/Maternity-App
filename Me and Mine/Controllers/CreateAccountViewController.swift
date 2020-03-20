@@ -63,7 +63,7 @@ class CreateAccountViewController: UIViewController {
                 if error == nil {
                     print("You have successfully signed up")
                     
-                    
+                    self.saveUserData()
                     /*we want to connect the user uid from firebase to the user's first/last/username by using the changerequest function to do so -- by using the user profile properties  */
                     
                     let displayName = ""
@@ -79,11 +79,29 @@ class CreateAccountViewController: UIViewController {
                     alertController.addAction(defaultAction)
                     self.present(alertController, animated: true, completion: nil)
                 }
+                
+                
             }
         }
     }
-    
-    
+    //Template - to be able to reference the database (user profile properties)
+    func saveUserData(){
+        //Step1: Get reference to database
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        //Step2: get the userid from the user
+        let userID = Auth.auth().currentUser?.uid
+        
+        //Step3: write to database
+        let key = ref.child("userproperties").child(userID!)
+        let post = ["uid": userID,
+                    "author": "test",
+                    "title": "title",
+                    "body": "body"]
+        let childUpdates = ["\(key)": post]
+        ref.updateChildValues(childUpdates)
+    }
     
     
     override func viewDidLoad(){

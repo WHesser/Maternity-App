@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SOSDisplayViewController: UIViewController {
 //MARK: Properties
@@ -25,6 +26,8 @@ class SOSDisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let userID = Auth.auth().currentUser
+        print(userID) 
 
     }
     
