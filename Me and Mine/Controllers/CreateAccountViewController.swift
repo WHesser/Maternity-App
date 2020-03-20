@@ -86,22 +86,22 @@ class CreateAccountViewController: UIViewController {
     }
     //Template - to be able to reference the database (user profile properties)
     func saveUserData(){
-        //Step1: Get reference to database
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        
+    
         //Step2: get the userid from the user
-        let userID = Auth.auth().currentUser?.uid
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
         
-        //Step3: write to database
-        let key = ref.child("userproperties").child(userID!)
-        let post = ["uid": userID,
-                    "author": "test",
-                    "title": "title",
-                    "body": "body"]
-        let childUpdates = ["\(key)": post]
-        ref.updateChildValues(childUpdates)
+        let userObject = [
+            "username": "blahblah",
+            "photoURL": "testing"
+            ] as [String:Any]
+        
+        databaseRef.setValue(userObject) { error, ref in
+        }
     }
+    
+    
+    
     
     
     override func viewDidLoad(){
