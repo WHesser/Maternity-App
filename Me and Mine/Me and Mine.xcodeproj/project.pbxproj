@@ -23,7 +23,7 @@
 		9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679260F24229B94000D1AC5 /* PersonalViewController.swift */; };
 		967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967926132422C829000D1AC5 /* EditSOSViewController.swift */; };
 		9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679261724240252000D1AC5 /* PlanningViewController.swift */; };
-		96F5296E242555F80084F549 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5296D242555F80084F549 /* Item.swift */; };
+		96F5296E242555F80084F549 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5296D242555F80084F549 /* UserProfile.swift */; };
 		9E5502F7CC50DEEFCBAA3DC1 /* Pods_Me_and_Mine_Me_and_MineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */; };
 		C50155F2DC70318054C31B29 /* Pods_Me_and_Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA28C5FF9497EFB647C7D29A /* Pods_Me_and_Mine.framework */; };
 /* End PBXBuildFile section */
@@ -71,7 +71,7 @@
 		9679260F24229B94000D1AC5 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		967926132422C829000D1AC5 /* EditSOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSOSViewController.swift; sourceTree = "<group>"; };
 		9679261724240252000D1AC5 /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
-		96F5296D242555F80084F549 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		96F5296D242555F80084F549 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_Mine_Me_and_MineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CAAB532BCA06AB5BBE85EC /* Pods-Me and Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine.debug.xcconfig"; path = "Target Support Files/Pods-Me and Mine/Pods-Me and Mine.debug.xcconfig"; sourceTree = "<group>"; };
 		C06E76503DCE529C2CA15CA6 /* Pods-Me and Mine-Me and MineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine-Me and MineUITests.release.xcconfig"; path = "Target Support Files/Pods-Me and Mine-Me and MineUITests/Pods-Me and Mine-Me and MineUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0241041B241AF26A0099EA87 /* GoogleService-Info.plist */,
-				96F5296D242555F80084F549 /* Item.swift */,
+				96F5296D242555F80084F549 /* UserProfile.swift */,
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
@@ -440,7 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F5296E242555F80084F549 /* Item.swift in Sources */,
+				96F5296E242555F80084F549 /* UserProfile.swift in Sources */,
 				9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */,
 				967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */,
 				0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */,

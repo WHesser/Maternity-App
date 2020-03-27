@@ -178,9 +178,6 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
-                                                        <connections>
-                                                            <action selector="textFieldCreateAccountLastName:" destination="9gp-Ed-oGv" eventType="editingDidEnd" id="mQZ-Y6-OLr"/>
-                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDT-89-FA8">
                                                         <rect key="frame" x="217.5" y="0.0" width="166.5" height="50"/>
@@ -189,10 +186,6 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
-                                                        <connections>
-                                                            <action selector="textFieldCreateAccountFirstName:" destination="9gp-Ed-oGv" eventType="editingDidEnd" id="AxO-Sm-MPg"/>
-                                                            <action selector="textFileCreateAccountFirstName:" destination="9gp-Ed-oGv" eventType="editingDidEnd" id="SGH-Du-WAV"/>
-                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -203,9 +196,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                                <connections>
-                                                    <action selector="textFileCreateAccountUsername:" destination="9gp-Ed-oGv" eventType="editingDidEnd" id="Zae-F4-6IQ"/>
-                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQw-sM-SYz">
                                                 <rect key="frame" x="0.0" y="140" width="384" height="50"/>
@@ -272,7 +262,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvd-yH-AxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="9gp-Ed-oGv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-594" y="-490"/>
         </scene>

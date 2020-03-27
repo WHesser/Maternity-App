@@ -21,22 +21,6 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
     
-    //Confirm password
-    
-    /*
-     function -- make sure password and confirm password is the same
-     func validatePassword() -> Bool {
-     if password.text == confirmPassword.text {
-     return true
-     }
-     else
-     {
-     put alert saying its false
-     return false
-     }
-     return true
-     }*/
-    
     @IBAction func SignUpButton(_ sender: Any) {
         if email.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
@@ -63,7 +47,7 @@ class CreateAccountViewController: UIViewController {
                 if error == nil {
                     print("You have successfully signed up")
                     
-                    self.saveUserData()
+                    
                     /*we want to connect the user uid from firebase to the user's first/last/username by using the changerequest function to do so -- by using the user profile properties  */
                     
                     let displayName = ""
@@ -72,6 +56,7 @@ class CreateAccountViewController: UIViewController {
                     Analytics.setUserProperty(displayName, forName: "username")
                     self.dismiss(animated: true, completion: nil)
                     
+                    self.saveUserData()
                 }
                 else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -86,17 +71,20 @@ class CreateAccountViewController: UIViewController {
     }
     //Template - to be able to reference the database (user profile properties)
     func saveUserData(){
-    
+        
         //Step2: get the userid from the user
         guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        //creates or gets path
         let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-        
-        let userObject = [
-            "username": "blahblah",
-            "photoURL": "testing"
+        //creates a place to set properties in
+        let userProfile = [
+            "username": username,
+            "firstname": firstName,
+            "lastname": lastName
             ] as [String:Any]
-        
-        databaseRef.setValue(userObject) { error, ref in
+        //actually sets the value to the database 
+        databaseRef.setValue(userProfile) { error, ref in
         }
     }
     
