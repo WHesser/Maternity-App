@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -807,16 +807,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="284" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="username:" destination="Tz4-fS-GrI" eventType="editingDidEnd" id="wuS-bT-35h"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1d-Er-kYc">
                                         <rect key="frame" x="0.0" y="45.5" width="284" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="email:" destination="Tz4-fS-GrI" eventType="editingDidEnd" id="fIp-fW-fdw"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ca1-BW-rKl">
                                         <rect key="frame" x="0.0" y="91" width="284" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="phone:" destination="Tz4-fS-GrI" eventType="editingDidEnd" id="J8R-1n-fhR"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -865,10 +874,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                             </button>
+                            <connections>
+                                <action selector="DoneButton:" destination="Tz4-fS-GrI" id="hZl-bN-wFQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqa-rR-tms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Tz4-fS-GrI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2512" y="1114"/>
         </scene>
@@ -1142,11 +1155,11 @@
     </scenes>
     <resources>
         <image name="Me&amp;MineLogo" width="200" height="200"/>
-        <image name="archivebox" catalog="system" width="128" height="106"/>
-        <image name="bag" catalog="system" width="128" height="128"/>
-        <image name="gamecontroller" catalog="system" width="128" height="82"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="person" catalog="system" width="128" height="117"/>
-        <image name="tray.fill" catalog="system" width="128" height="88"/>
+        <image name="archivebox" catalog="system" width="64" height="52"/>
+        <image name="bag" catalog="system" width="64" height="64"/>
+        <image name="gamecontroller" catalog="system" width="64" height="40"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="tray.fill" catalog="system" width="64" height="44"/>
     </resources>
 </document>

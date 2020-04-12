@@ -21,6 +21,8 @@
 		02D4636123F0AC1200555EC2 /* Me_and_MineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4636023F0AC1200555EC2 /* Me_and_MineTests.swift */; };
 		02D4636C23F0AC1200555EC2 /* Me_and_MineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4636B23F0AC1200555EC2 /* Me_and_MineUITests.swift */; };
 		14EA23663AAB663B5C9FF3BA /* Pods_Me_and_MineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949F2814A6FD672942B8920F /* Pods_Me_and_MineTests.framework */; };
+		961B043E2443B43300E0935F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961B043D2443B43300E0935F /* SettingViewController.swift */; };
+		961B04402443BA9E00E0935F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961B043F2443BA9E00E0935F /* UserProfile.swift */; };
 		9665EF4E23FDDBBC00F87514 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */; };
 		9665EF5123FDE2B100F87514 /* SOSDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665EF5023FDE2B100F87514 /* SOSDisplayViewController.swift */; };
 		9679261024229B94000D1AC5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679260F24229B94000D1AC5 /* PersonalViewController.swift */; };
@@ -72,13 +74,14 @@
 		4ADD170ACEDC00ED96583BC6 /* Pods-Me and Mine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine.release.xcconfig"; path = "Target Support Files/Pods-Me and Mine/Pods-Me and Mine.release.xcconfig"; sourceTree = "<group>"; };
 		921D9175CEA0E3E097DB8212 /* Pods-Me and MineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and MineTests.release.xcconfig"; path = "Target Support Files/Pods-Me and MineTests/Pods-Me and MineTests.release.xcconfig"; sourceTree = "<group>"; };
 		949F2814A6FD672942B8920F /* Pods_Me_and_MineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_MineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		961B043D2443B43300E0935F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		961B043F2443BA9E00E0935F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		9665EF4D23FDDBBC00F87514 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9665EF5023FDE2B100F87514 /* SOSDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSDisplayViewController.swift; sourceTree = "<group>"; };
 		9679260F24229B94000D1AC5 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		967926132422C829000D1AC5 /* EditSOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSOSViewController.swift; sourceTree = "<group>"; };
 		9679261724240252000D1AC5 /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		96FAA912243D57910066CD90 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
-		96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		A5247440A3498DBC2011B9C5 /* Pods_Me_and_Mine_Me_and_MineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Me_and_Mine_Me_and_MineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CAAB532BCA06AB5BBE85EC /* Pods-Me and Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine.debug.xcconfig"; path = "Target Support Files/Pods-Me and Mine/Pods-Me and Mine.debug.xcconfig"; sourceTree = "<group>"; };
 		C06E76503DCE529C2CA15CA6 /* Pods-Me and Mine-Me and MineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Me and Mine-Me and MineUITests.release.xcconfig"; path = "Target Support Files/Pods-Me and Mine-Me and MineUITests/Pods-Me and Mine-Me and MineUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
 				96FAA912243D57910066CD90 /* Doctor.swift */,
+				961B043F2443BA9E00E0935F /* UserProfile.swift */,
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
 				02D4635723F0AC1100555EC2 /* Info.plist */,
@@ -193,7 +197,7 @@
 				967926132422C829000D1AC5 /* EditSOSViewController.swift */,
 				9679261724240252000D1AC5 /* PlanningViewController.swift */,
 				02711AF6242D65C600E30E12 /* ResourcesViewController.swift */,
-				96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */,
+				961B043D2443B43300E0935F /* SettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -454,7 +458,9 @@
 			files = (
 				02711AF7242D65C600E30E12 /* ResourcesViewController.swift in Sources */,
 				9679261824240252000D1AC5 /* PlanningViewController.swift in Sources */,
+				961B04402443BA9E00E0935F /* UserProfile.swift in Sources */,
 				96FAA913243D57910066CD90 /* Doctor.swift in Sources */,
+				961B043E2443B43300E0935F /* SettingViewController.swift in Sources */,
 				967926142422C829000D1AC5 /* EditSOSViewController.swift in Sources */,
 				0208766023FB5724001CA32E /* CreateAccountViewController.swift in Sources */,
 				02D4634E23F0AC1000555EC2 /* ViewController.swift in Sources */,

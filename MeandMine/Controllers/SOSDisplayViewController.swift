@@ -70,6 +70,7 @@ class SOSDisplayViewController: UIViewController {
                  fatalError("Unable to initialize type \(Doctor.self) with dictionary \(document.data()) error: \(error?.localizedDescription)")
                  }*/
             }
+        
             
             self.doctor = models.first
             self.documentReference = snapshot.documents.first?.reference
