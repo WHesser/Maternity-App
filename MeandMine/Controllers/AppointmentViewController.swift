@@ -11,6 +11,7 @@ import UIKit
 import SwiftUI
 //import Firebase
 import CodableFirebase
+import Firebase
 
 
 class AppointmentViewController: UIViewController {
@@ -18,6 +19,9 @@ class AppointmentViewController: UIViewController {
     var datePicker = UIDatePicker()
     // var doctor: Doctor?
     var appointment: Appointment?
+    
+    
+    var documentReference: DocumentReference?
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -53,11 +57,10 @@ class AppointmentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitialDate()
+        updateDisplayWitAppointment()
         
-  
-       
-        }
-        
+    }
+    
     func updateDisplayWitAppointment()  {
         guard let appointment = appointment else {return}
         // all text fields
@@ -67,7 +70,7 @@ class AppointmentViewController: UIViewController {
         appointmentCity.text = appointment.addCity
         appointmentState.text = appointment.addState
         appointmentZipcode.text = String(appointment.addZip)
-     
+        
     }
     
     
@@ -80,53 +83,46 @@ class AppointmentViewController: UIViewController {
             let city = appointmentCity.text,
             let state = appointmentState.text,
             let zipcode = Int(appointmentZipcode.text ?? "0") else {return}
-             
-    
-    
-    
-  /*:
-    if let appointment = appointment {
-               /// Update existing doctor's info
-               let updatedAppointment = Appointment(apptTitle: title, apptAddOne: addressL1, apptAddTwo: addressL2, apptCity: city, apptState: state, apptZipcode: zipcode)
+        
+        
+        
+        
+        
+        // 2. Determine if we are saving an existing doctor or creating a new doctor
+        if let appointment = appointment, let documentReference = documentReference {
+            /// Update existing doctor's info
+            let updatedAppointment = Appointment(appTitle: title, addLineOne: addressL1, addLineTwo: addressL2, addCity: city, addState: state, addZip: zipcode)
+            
+            // Updates the existing doctor info to the server
+            
+            documentReference.updateData(updatedAppointment.documentData) { (error) in
+                if let error = error {
+                    print("Could not update appointment: \(error)")
+                    
+                } else {
+                    print("updated appointment success!")
+                }
                 
-              
-               
-               // Updates the existing doctor info to the server
-               let documentRef = //Firestore.firestore().collection("Appointment").document(updatedAppointment.documentID)
-               documentRef.updateData(updatedAppointment.documentData) { (error) in
-                   if let error = error {
-                       print("Could not update doctor: \(error)")
-                       
-                   } else {
-                       print("updated appointment success!")
-                   }
-                   
-                   self.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+        } else {
+            // creates a  new  doctor on the server
+            let newAppointment = Appointment(appTitle: title, addLineOne: addressL1, addLineTwo: addressL2, addCity: city, addState: state, addZip: zipcode)
+            Firestore.firestore().collection("Appointment").addDocument(data: newAppointment.documentData) { (error) in
+                if let error = error {
+                    print("Could not update appointment: \(error)")
+                    
+                } else {
+                    print("Added appointment a success!")
+                }
+                self.navigationController?.popViewController(animated: true)
+            }
+            
         }
-               } else {
-               // creates a  new  doctor on the server
-                let newUpdatedAppointment = Appointment(apptTitle: title, apptAddOne: addressL1, apptAddTwo: addressL2, apptCity: city, apptState: state, apptZipcode: zipcode)
-          //     Firestore.firestore().collection("Appointment").addDocument(data: newUpdatedAppointment.documentData) { (error) in
-                   if let error = error {
-                       print("Could not update doctor: \(error)")
-                       
-                   } else {
-                       print("Added doctor a success!")
-                   }
-                   
-                    self.dismiss(animated: true, completion: nil)
-               }
+    }
     
- }
-                
-        */
-                
-                
-                
-        }
 }
-        
-        
-    
+
 
 

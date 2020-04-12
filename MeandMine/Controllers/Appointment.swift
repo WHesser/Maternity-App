@@ -17,5 +17,26 @@ struct Appointment: Codable {
     var addCity: String
     var addState: String
     var addZip: Int
-    var uid: String
+
+
+
+
+    var documentData: [String: Any] {
+        
+        var uid = ""
+        if let currentUser = Auth.auth().currentUser?.uid {
+            uid = currentUser
+        }
+            
+        return [
+            "appTitle": appTitle,
+            "addCity": addCity,
+            "addLineOne": addLineOne,
+            "addLineTwo": addLineTwo,
+            "addZip": addZip,
+            "addState": addState,
+            "uid" : uid
+        ]
+    }
 }
+

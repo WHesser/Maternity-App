@@ -17,6 +17,8 @@ class AppointmentTableViewController: UIViewController, UITableViewDelegate, UIT
     
     var appointments: [Appointment] = []
     var appointmentSnapshots: [DocumentSnapshot] = []
+    var selectedAppointment: Appointment?
+    var selectedAppointmentReference: DocumentReference?
      
     
     @IBOutlet weak var tableView: UITableView!
@@ -79,17 +81,42 @@ class AppointmentTableViewController: UIViewController, UITableViewDelegate, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "myAppointment", for: indexPath)
         
         let appointment = self.appointments[indexPath.row]
-        
-        
         cell.textLabel?.text = appointment.appTitle
         
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let appointment = self.appointments[indexPath.row]
+        self.selectedAppointment = appointment
+        
+        let appointmentRef = self.appointmentSnapshots[indexPath.row].reference
+        
+        self.selectedAppointmentReference = appointmentRef
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "editAppointment", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          guard let appointmentViewController = segue.destination as? AppointmentViewController else {
+              return}
+          
+          
+          if  segue.identifier == "editAppointment" {
+              appointmentViewController.appointment = self.selectedAppointment
+              appointmentViewController.documentReference = self.selectedAppointmentReference
+          }
+    
+    }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
           super.viewDidAppear(animated)
+            self.selectedAppointment = nil
+            self.selectedAppointmentReference = nil
           fetchAppointments()
+        
           
       }
     
