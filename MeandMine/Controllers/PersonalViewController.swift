@@ -66,17 +66,13 @@ class PersonalViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.textLabel?.text = "Due Date"
         
         return cell
-            
-            
-            
+        
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
             
             cell.textLabel?.text = "Appointments"
             
-            
-            
-            
+   
             return cell
             
         }

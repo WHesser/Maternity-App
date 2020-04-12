@@ -61,12 +61,12 @@ class AppointmentViewController: UIViewController {
     func updateDisplayWitAppointment()  {
         guard let appointment = appointment else {return}
         // all text fields
-        appointmentTitle.text = appointment.apptTitle
-        appointmentAddOne.text = appointment.apptAddOne
-        appointmentAddTwo.text = appointment.apptAddTwo
-        appointmentCity.text = appointment.apptCity
-        appointmentState.text = String(appointment.apptZipcode)
-        
+        appointmentTitle.text = appointment.appTitle
+        appointmentAddOne.text = appointment.addLineOne
+        appointmentAddTwo.text = appointment.addLineTwo
+        appointmentCity.text = appointment.addCity
+        appointmentState.text = appointment.addState
+        appointmentZipcode.text = String(appointment.addZip)
      
     }
     

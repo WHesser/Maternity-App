@@ -158,7 +158,6 @@
 				02D4634923F0AC1000555EC2 /* AppDelegate.swift */,
 				02D4634B23F0AC1000555EC2 /* SceneDelegate.swift */,
 				02D4634F23F0AC1000555EC2 /* Main.storyboard */,
-				028C59902443BC09000D7162 /* AppointmentTableViewController.swift */,
 				96FAA912243D57910066CD90 /* Doctor.swift */,
 				02D4635223F0AC1100555EC2 /* Assets.xcassets */,
 				02D4635423F0AC1100555EC2 /* LaunchScreen.storyboard */,
@@ -211,6 +210,7 @@
 				02711AF6242D65C600E30E12 /* ResourcesViewController.swift */,
 				96FB8E7E242ED28E00A43651 /* SettingTableViewController.swift */,
 				02622D05243EB2840003D7BB /* ArticleViewController.swift */,
+				028C59902443BC09000D7162 /* AppointmentTableViewController.swift */,
 				02634111244019EB00648210 /* DueDateViewController.swift */,
 			);
 			path = Controllers;

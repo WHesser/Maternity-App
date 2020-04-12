@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import Firebase
 
-struct Appointment {
-    var apptTitle: String
-    var apptAddOne: String
-    var apptAddTwo: String
-    var apptCity: String
-    var apptState: String
-    var apptZipcode: Int
+struct Appointment: Codable {
+    var appTitle: String
+    var addLineOne: String
+    var addLineTwo: String
+    var addCity: String
+    var addState: String
+    var addZip: Int
     var uid: String
 }
