@@ -15,14 +15,11 @@ class SettingProfile {
         self.username = username
         self.email = email 
     }
-    
-    
 }
 class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - Table view data source
@@ -36,6 +33,5 @@ class SettingTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
-    
-    
+  
 }

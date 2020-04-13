@@ -17,16 +17,11 @@ import Firebase
 class AppointmentViewController: UIViewController {
     //MARK: Properties
     var datePicker = UIDatePicker()
-    // var doctor: Doctor?
     var appointment: Appointment?
-    
-    
     var documentReference: DocumentReference?
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dateLabel: UILabel!
-    
-    
     @IBOutlet weak var appointmentTitle: UITextField!
     @IBOutlet weak var appointmentAddOne: UITextField!
     @IBOutlet weak var appointmentAddTwo: UITextField!
@@ -34,8 +29,7 @@ class AppointmentViewController: UIViewController {
     @IBOutlet weak var appointmentState: UITextField!
     @IBOutlet weak var appointmentZipcode: UITextField!
     
-    
-    
+
     @IBAction func datePicker(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.short
@@ -73,8 +67,6 @@ class AppointmentViewController: UIViewController {
         
     }
     
-    
-    
     @IBAction func saveAppointment(_ sender: UIBarButtonItem) {
         
         guard let title = appointmentTitle.text,
@@ -83,10 +75,7 @@ class AppointmentViewController: UIViewController {
             let city = appointmentCity.text,
             let state = appointmentState.text,
             let zipcode = Int(appointmentZipcode.text ?? "0") else {return}
-        
-        
-        
-        
+
         
         // 2. Determine if we are saving an existing doctor or creating a new doctor
         if let appointment = appointment, let documentReference = documentReference {
@@ -123,6 +112,4 @@ class AppointmentViewController: UIViewController {
     }
     
 }
-
-
 

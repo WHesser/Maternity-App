@@ -41,5 +41,4 @@ struct ResourcesViewControllers : View {
                       components.minute ?? 00,
                       components.second ?? 00)
     }
-
 }

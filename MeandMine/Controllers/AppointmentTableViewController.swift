@@ -30,9 +30,7 @@ class AppointmentTableViewController: UIViewController, UITableViewDelegate, UIT
         self.navigationItem.title = "My Appointments!"
         fetchAppointments()
     }
-    
-    
-    
+
     func fetchAppointments() {
         
         // Fetch the Doctor Information and map to `Doctor.swift`
@@ -54,8 +52,6 @@ class AppointmentTableViewController: UIViewController, UITableViewDelegate, UIT
                 
                 let model = try! FirestoreDecoder().decode(Appointment.self, from: document.data())
                 return model
-                
- 
             }
             
             self.appointments = models
@@ -107,19 +103,13 @@ class AppointmentTableViewController: UIViewController, UITableViewDelegate, UIT
               appointmentViewController.appointment = self.selectedAppointment
               appointmentViewController.documentReference = self.selectedAppointmentReference
           }
-    
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
           super.viewDidAppear(animated)
             self.selectedAppointment = nil
             self.selectedAppointmentReference = nil
           fetchAppointments()
-        
-          
       }
-    
-    
-    
+ 
 }

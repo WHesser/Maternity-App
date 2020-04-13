@@ -50,11 +50,7 @@ class CreateAccountViewController: UIViewController {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
                 
                 
-                //create user profile
-                //create a new user account
-                
-                
-                /*Confirm Password -- make sure the password and confirm password matches */
+ 
                 func validPassword(testStr:String?) -> Bool {
                     guard testStr != nil else { return false }
                     // at least one uppercase,
@@ -84,10 +80,7 @@ class CreateAccountViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
+
     override func viewDidLoad(){
         super.viewDidLoad()}
     

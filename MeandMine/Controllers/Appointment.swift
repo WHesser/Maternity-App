@@ -17,10 +17,6 @@ struct Appointment: Codable {
     var addCity: String
     var addState: String
     var addZip: Int
-
-
-
-
     var documentData: [String: Any] {
         
         var uid = ""

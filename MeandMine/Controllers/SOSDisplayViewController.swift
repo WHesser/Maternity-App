@@ -63,12 +63,6 @@ class SOSDisplayViewController: UIViewController {
                 
                 let model = try! FirestoreDecoder().decode(Doctor.self, from: document.data())
                 return model
-                
-                /*   if let model = Doctor(dictionary: document.data()) {
-                 return model
-                 } else {
-                 fatalError("Unable to initialize type \(Doctor.self) with dictionary \(document.data()) error: \(error?.localizedDescription)")
-                 }*/
             }
             
             self.doctor = models.first

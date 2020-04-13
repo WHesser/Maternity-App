@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 
-
 class EditSOSViewController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var sosLabel: UILabel!
@@ -65,7 +64,6 @@ class EditSOSViewController: UIViewController {
                                        zipcode: zipcode,
                                        state: state)
             
-            // Updates the existing doctor info to the server
            
             documentReference.updateData(updatedDoctor.documentData) { (error) in
                 if let error = error {
@@ -94,24 +92,4 @@ class EditSOSViewController: UIViewController {
         }
     }
     
-    
-    
-  /*  func saveNewDoctor(doctor: Doctor) {
-        
-    }
-    
-    func updateDoctor(doctor: Doctor) {
-        
-        /* print("Going to save document data as \(restaurant.documentData)")
-         
-         Firestore.firestore().collection("restaurants").document()
-         .setData(restaurant.documentData) { error in
-         if let error = error {
-         print("Error writing document: \(error)")
-         } else {
-         self.presentDidSaveAlert()
-         }*/
- 
- 
-    } */
 }

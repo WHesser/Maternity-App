@@ -30,7 +30,6 @@ class PlanningViewController: UIViewController, UITextFieldDelegate, UITableView
         self.articles.count
         
     }
-    
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -39,9 +38,7 @@ class PlanningViewController: UIViewController, UITextFieldDelegate, UITableView
         cell.textLabel?.text = article.displayText
        // cell.imageView?.image = article.displayImage
         return cell
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +52,7 @@ class PlanningViewController: UIViewController, UITextFieldDelegate, UITableView
         }
     }
     
-    
     func fetchArticles() {
-
         
         let basicQuery = Firestore.firestore().collection("Articles").limit(to: 50)
         basicQuery.getDocuments { (snapshot, error) in
@@ -68,7 +63,6 @@ class PlanningViewController: UIViewController, UITextFieldDelegate, UITableView
             guard let snapshot = snapshot else { return }
             let allDocuments = snapshot.documents
             for articleListing in allDocuments {
-              //  print("I have this restaurant \(restaurantDocument.data())")
                 
                 let article  = try! FirestoreDecoder().decode(Article.self, from: articleListing.data())
                 
@@ -89,7 +83,6 @@ class PlanningViewController: UIViewController, UITextFieldDelegate, UITableView
         articleViewController.article = articles[indexPath.row]
       }
     }
-    
 
 }
 
