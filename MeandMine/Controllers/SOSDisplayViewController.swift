@@ -23,7 +23,7 @@ class SOSDisplayViewController: UIViewController {
     @IBOutlet weak var docZip: UILabel!
     
     var doctor: Doctor? // 
-    var documentReference: DocumentReference? // oFireStore Reference used to fetch latest values/used to store updates. SeeMore: https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentReference
+    var documentReference: DocumentReference? // FireStore Reference used to fetch latest values/used to store 
     
     
     @IBAction func EditButton(_ sender: UIButton) {

@@ -21,22 +21,9 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
     
-    //Confirm password
-    
-    /*
-     function -- make sure password and confirm password is the same
-     func validatePassword() -> Bool {
-     if password.text == confirmPassword.text {
-     return true
-     }
-     else
-     {
-     put alert saying its false
-     return false
-     }
-     return true
-     }*/
-    
+ 
+   
+
     @IBAction func SignUpButton(_ sender: Any) {
         if email.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
