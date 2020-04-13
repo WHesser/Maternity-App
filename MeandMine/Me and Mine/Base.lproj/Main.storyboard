@@ -274,7 +274,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvd-yH-AxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9gp-Ed-oGv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-1846"/>
+            <point key="canvasLocation" x="261" y="-1807"/>
         </scene>
         <!--EditSOS View Controller-->
         <scene sceneID="lKr-sq-MpS">
@@ -454,7 +454,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.93765804350000004" blue="0.75373529189999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ni5-Kg-C9r" firstAttribute="leading" secondItem="Bte-8Z-ckh" secondAttribute="leading" id="6FH-CG-D50"/>
                             <constraint firstItem="ni5-Kg-C9r" firstAttribute="top" secondItem="Bte-8Z-ckh" secondAttribute="bottom" id="8eN-Ej-asA"/>
@@ -706,7 +706,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYA-ey-UIc" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="724" id="lrr-3w-zrR"/>
@@ -731,7 +731,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="GQU-Kq-Bar"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ckL-K5-6ca" firstAttribute="top" secondItem="V3K-XQ-QiB" secondAttribute="top" id="1Pn-ws-7dl"/>
                             <constraint firstItem="pLm-ZB-8l0" firstAttribute="top" secondItem="V3K-XQ-QiB" secondAttribute="top" id="1q3-Mp-MWB"/>
@@ -769,7 +769,7 @@
                     <view key="view" contentMode="scaleToFill" id="BR5-6V-fGZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="uwP-74-ffJ"/>
                     </view>
                 </viewController>
@@ -784,7 +784,7 @@
                     <view key="view" contentMode="scaleToFill" id="rMP-2p-mqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="8MZ-Ad-RkY"/>
                     </view>
                 </viewController>
@@ -856,7 +856,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.93097895360000005" blue="0.72784643270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="J7K-D2-IW6" firstAttribute="leading" secondItem="a2Z-ZB-4c9" secondAttribute="leading" constant="15" id="CEP-mL-tty"/>
                             <constraint firstItem="J7K-D2-IW6" firstAttribute="top" secondItem="a2Z-ZB-4c9" secondAttribute="top" constant="15" id="gOE-Re-I6a"/>
@@ -1112,11 +1112,11 @@
             </objects>
             <point key="canvasLocation" x="261" y="396"/>
         </scene>
-        <!--ACTIVITIES-->
+        <!--ARTICLES-->
         <scene sceneID="ZAn-WH-e1q">
             <objects>
                 <navigationController id="5ds-Os-0lX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ACTIVITIES" image="gamecontroller" catalog="system" id="U5M-h2-U67"/>
+                    <tabBarItem key="tabBarItem" title="ARTICLES" image="doc.text" catalog="system" id="U5M-h2-U67"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="enb-40-6gc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1157,7 +1157,7 @@
         <image name="Me&amp;MineLogo" width="200" height="200"/>
         <image name="archivebox" catalog="system" width="64" height="52"/>
         <image name="bag" catalog="system" width="64" height="64"/>
-        <image name="gamecontroller" catalog="system" width="64" height="40"/>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="tray.fill" catalog="system" width="64" height="44"/>
