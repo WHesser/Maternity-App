@@ -37,6 +37,7 @@ class PlanningViewController: UIViewController, UITextFieldDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleTableViewCell", for: indexPath)
         let article = articles[indexPath.row]
         cell.textLabel?.text = article.displayText
+       // cell.imageView?.image = article.displayImage
         return cell
         
     }

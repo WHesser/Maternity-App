@@ -1196,7 +1196,7 @@
         <!--SETTINGS-->
         <scene sceneID="4YE-QI-r3k">
             <objects>
-                <viewController id="gcS-iM-a5f" sceneMemberID="viewController">
+                <viewController id="gcS-iM-a5f" customClass="SettingTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CeU-Rc-ucN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
